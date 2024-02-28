@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  border-radius: 2px;
+  overflow: hidden;
+  width: 50%;
+  padding: 20px 20px;
+}
+
+/* Style the outer container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+/* Style Heading   */
+.hr-lines:before {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: rgb(104, 99, 99);
+}
+
+.hr-lines {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff6b82;
+  margin: 30px;
+}
+
+.hr-lines:after {
+  content: " ";
+  height: 2px;
+  width: 25%;
+  background: grey;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+/*  Style the Units */
+.radio-container {
+  display: flex;
+  align-items: center;
+}
+
+.radio-input {
+  margin-right: 10px;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Style the span element */
+.discount-span {
+  background-color: #ff6b82;
+  color: #fff;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+.prices-container {
+  text-align: right;
+}
+
+/* Style the standard price container */
+.sub {
+  margin-left: 36px;
+  margin-top: -6px;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.std-price-container {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Style the Most Popular Element */
+#pop {
+  font-weight: bold;
+  position: absolute;
+  background-color: #ff6b82;
+  color: white;
+  margin: -22px 33%;
+  padding: 3px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+/* Style the  Size n Color container */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 6px;
+  width: 50%;
+  font-size: 0.9rem;
+}
+
+/* Style the row */
+.chart-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* Style the heading */
+.chart-heading {
+  padding: 2px 15px;
+  text-align: right;
+}
+
+/* Style the data */
+.chart-data {
+  padding: 1px;
+  text-align: center;
+}
+
+/* Style the select elements */
+select {
+  width: 90%;
+  padding: 2px 3px;
+}
+
+/* Style the Total Amt */
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 33px;
+  font-weight: bold;
+}
+
+#free-del {
+  color: #ff6b82;
+}
+
+/* Style Add to Cart Button */
+.add-to-cart-btn {
+  width: 100%;
+  background-color: #ff6b82;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 15px 10px;
+  border-radius: 6px;
+}
+
+.rm-space {
+  margin: 20px 31px;
+}
+
+/* Style Section elements Visibility */
+.unit-section:not(.active) {
+  max-height: 5em;
+  overflow: hidden;
+}
+
+.unit-section {
+  padding: 10px 20px;
+  border: 2px solid grey;
+  transition: all 0.5s ease-out;
+  margin: 20px 30px;
+}
+
+.unit-section:hover {
+  border: 2px solid #ff6b82;
+  background-color: #fff9fa;
+}
