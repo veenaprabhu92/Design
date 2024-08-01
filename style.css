@@ -11,16 +11,14 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 10px;
 }
 
 main {
   box-shadow: 0 4px 8px rgb(0, 0, 0);
   border-radius: 2px;
   overflow: hidden;
-  width: 100%;
-  max-width: 700px;
-  padding: 20px;
+  width: 50%;
+  padding: 20px 20px;
 }
 
 /* Style the outer container */
@@ -28,39 +26,43 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px;
   font-weight: bold;
 }
 
-/* Style Heading */
+/* Style Heading   */
+.hr-lines:before {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: rgb(104, 99, 99);
+}
+
 .hr-lines {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ff6b82;
-  margin: 30px 0;
-  text-align: center;
-}
-
-.hr-lines:before, .hr-lines:after {
-  content: "";
-  height: 2px;
-  width: 25%;
-  background: grey;
-  position: absolute;
-  top: 50%;
-}
-
-.hr-lines:before {
-  left: 0;
+  margin: 30px;
 }
 
 .hr-lines:after {
+  content: " ";
+  height: 2px;
+  width: 25%;
+  background: grey;
+  display: block;
+  position: absolute;
+  top: 50%;
   right: 0;
 }
 
-/* Style the Units */
+/*  Style the Units */
 .radio-container {
   display: flex;
   align-items: center;
@@ -72,6 +74,7 @@ main {
 
 .label-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -107,49 +110,51 @@ main {
   position: absolute;
   background-color: #ff6b82;
   color: white;
-  margin: -22px 0;
+  margin: -22px 33%;
   padding: 3px;
   white-space: nowrap;
   font-size: 0.8rem;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-/* Style the Size and Color container */
+/* Style the  Size n Color container */
 .chart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 15px 6px;
-  width: 100%;
+  width: 50%;
   font-size: 0.9rem;
 }
 
 /* Style the row */
 .chart-row {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
-  width: 100%;
 }
 
 /* Style the heading */
-.chart-heading, .chart-data {
+.chart-heading {
   padding: 2px 15px;
-  width: 50%;
+  text-align: right;
+}
+
+/* Style the data */
+.chart-data {
+  padding: 1px;
+  text-align: center;
 }
 
 /* Style the select elements */
 select {
-  width: 100%;
+  width: 90%;
   padding: 2px 3px;
 }
 
-/* Style the Total Amount */
+/* Style the Total Amt */
 .total-amount {
   display: flex;
   justify-content: space-between;
-  margin: 22px 0;
+  margin: 22px 33px;
   font-weight: bold;
 }
 
@@ -169,7 +174,7 @@ select {
 }
 
 .rm-space {
-  margin: 20px 0;
+  margin: 20px 31px;
 }
 
 /* Style Section elements Visibility */
@@ -182,41 +187,10 @@ select {
   padding: 10px 20px;
   border: 2px solid grey;
   transition: all 0.5s ease-out;
-  margin: 20px 0;
+  margin: 20px 30px;
 }
 
 .unit-section:hover {
   border: 2px solid #ff6b82;
   background-color: #fff9fa;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .chart-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .prices-container {
-    text-align: left;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .label-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #pop {
-    font-size: 0.7rem;
-    padding: 2px 4px;
-    margin: -20px 0;
-  }
 }
