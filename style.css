@@ -11,13 +11,15 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 10px;
 }
 
 main {
   box-shadow: 0 4px 8px rgb(0, 0, 0);
   border-radius: 2px;
   overflow: hidden;
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
   padding: 20px 20px;
 }
 
@@ -26,11 +28,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin: 10px 0;
   font-weight: bold;
 }
 
-/* Style Heading   */
+/* Style Heading */
 .hr-lines:before {
   content: " ";
   display: block;
@@ -48,7 +50,7 @@ main {
   justify-content: center;
   align-items: center;
   color: #ff6b82;
-  margin: 30px;
+  margin: 30px 0;
 }
 
 .hr-lines:after {
@@ -62,7 +64,7 @@ main {
   right: 0;
 }
 
-/*  Style the Units */
+/* Style the Units */
 .radio-container {
   display: flex;
   align-items: center;
@@ -110,19 +112,19 @@ main {
   position: absolute;
   background-color: #ff6b82;
   color: white;
-  margin: -22px 33%;
+  margin: -22px auto;
   padding: 3px;
   white-space: nowrap;
   font-size: 0.8rem;
 }
 
-/* Style the  Size n Color container */
+/* Style the Size n Color container */
 .chart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 15px 6px;
-  width: 50%;
+  width: 100%;
   font-size: 0.9rem;
 }
 
@@ -130,18 +132,21 @@ main {
 .chart-row {
   display: flex;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 /* Style the heading */
 .chart-heading {
   padding: 2px 15px;
   text-align: right;
+  width: 50%;
 }
 
 /* Style the data */
 .chart-data {
   padding: 1px;
   text-align: center;
+  width: 50%;
 }
 
 /* Style the select elements */
@@ -154,7 +159,7 @@ select {
 .total-amount {
   display: flex;
   justify-content: space-between;
-  margin: 22px 33px;
+  margin: 22px 0;
   font-weight: bold;
 }
 
@@ -174,7 +179,7 @@ select {
 }
 
 .rm-space {
-  margin: 20px 31px;
+  margin: 20px 0;
 }
 
 /* Style Section elements Visibility */
@@ -187,10 +192,54 @@ select {
   padding: 10px 20px;
   border: 2px solid grey;
   transition: all 0.5s ease-out;
-  margin: 20px 30px;
+  margin: 20px 0;
 }
 
 .unit-section:hover {
   border: 2px solid #ff6b82;
   background-color: #fff9fa;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+  }
+
+  .chart-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart-heading, .chart-data {
+    width: 100%;
+    text-align: left;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .prices-container {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .discount-span {
+    font-size: 0.8rem;
+  }
+
+  .label-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #pop {
+    font-size: 0.7rem;
+    padding: 2px 4px;
+    margin: -20px auto;
+  }
 }
